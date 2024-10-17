@@ -5,19 +5,19 @@ Este documento descreve o modelo de banco de dados utilizado para monitoramento 
 ## Entidades
 
 ### Sensores
-- **id_sensor** (INT, chave primária, NOT NULL)
+- **id_sensor** (INT,  PRIMARY KEY, AUTO_INCREMENT , NOT NULL)
 - **sensor_tipo** (VARCHAR(50), NOT NULL)
 - **sensor_local** (VARCHAR(100), NOT NULL)
 - **id_planta** (INT, NOT NULL, FOREIGN KEY referencing Plantacao(id_planta))
 
 ### Plantacao
-- **id_planta** (INT, chave primária, NOT NULL)
+- **id_planta** (INT,  PRIMARY KEY, AUTO_INCREMENT , NOT NULL)
 - **cultura** (VARCHAR(100), NOT NULL)
 - **area_planta** (DECIMAL(10,2), NOT NULL)
 - **local_planta** (VARCHAR(100), NOT NULL)
 
 ### Dados_do_sensor
-- **id_sens_dado** (INT, chave primária, NOT NULL)
+- **id_sens_dado** (INT, PRIMARY KEY, AUTO_INCREMENT , NOT NULL)
 - **umidade** (INT, NOT NULL)
 - **ajuste_data** (DATETIME, NOT NULL)
 - **ph_valor** (DECIMAL(4,2), NOT NULL)
